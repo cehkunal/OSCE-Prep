@@ -1,0 +1,12 @@
+ s_read_packet();
+ s_string("USER ");
+ s_string("anonymous");
+ s_string("\r\n");
+ s_read_packet();
+ s_string("PASS test\r\n");
+ s_read_packet();
+ s_string("STOR ");
+ s_string_variable("FUZZ");
+ s_string("\r\n");
+ s_read_packet();
+
